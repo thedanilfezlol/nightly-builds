@@ -59,7 +59,7 @@ jobs:
           cd linux
           shopt -s expand_aliases
           source ../pmbootstrap/helpers/envkernel.sh
-          make defconfig sm7150.config
+          make defconfig ARCH="arm64" sm7150.config
           make -j$(nproc)
           pmbootstrap build --envkernel linux-postmarketos-qcom-sm7150
 
