@@ -48,7 +48,7 @@ jobs:
 
       - name: Clone kernel sources
         run: |
-          git clone https://github.com/sm7150-mainline/linux.git --single-branch --branch ${{ env.KERNEL_BRANCH }} --depth 1
+          git clone https://github.com/thedanilfezlol/linux.git --single-branch --branch ${{ env.KERNEL_BRANCH }} --depth 1
 
       - name: Choose any SM7150 device in pmbootstrap to build kernel
         run: |
