@@ -32,7 +32,7 @@ jobs:
 
       - name: Set up pmaports
         run: |
-          echo -e '\n\n' | pmbootstrap init || true
+          echo -e '\n\n' | pmbootstrap --details-to-stdout init || true
           cd ~/.local/var/pmbootstrap/cache_git/pmaports
           git remote add sm7150 https://github.com/sm7150-mainline/pmaports.git
           DEFAULT_BRANCH=$(git remote show sm7150 | awk '/HEAD branch/ {print $NF}')
